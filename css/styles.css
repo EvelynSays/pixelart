@@ -4,10 +4,15 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
+/* Set the overall background color for dark mode */
+body {
+    background-color: #1E1E1E; /* Dark Gray */
+    color: #fff;
+}
+
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #334E54; /* Teal */
     text-align: center;
     padding: 1em 0;
 }
@@ -17,7 +22,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #eee;
+    background-color: #2D2D2D; /* Slightly Darker Gray */
     padding: 1em 0;
 }
 
@@ -25,33 +30,41 @@ nav li {
     margin: 0 10px;
 }
 
-/* Image grid container styles */
-.image-grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Set the container height to 100% of viewport height */
-    background-color: #f0f0f0; /* Just for visualization */
+/* Change link color on hover and visited */
+nav a {
+    color: #F0F0F0; /* Slightly Off-White */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff; /* White */
+}
+
+nav a:visited {
+    color: #999; /* Medium Gray */
 }
 
 /* Image grid styles */
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
-    align-items: center; /* Center images vertically within each cell */
-    justify-content: center; /* Center images horizontally within each cell */
+    margin: 0 auto; /* Center the entire grid horizontally */
 }
 
 .image-wrapper {
-    position: relative;
-    overflow: hidden;
+    width: calc(33.33% - 20px); /* Adjust width based on the number of images per row */
     text-align: center; /* Center images vertically */
+    display: flex; /* Enable flexbox layout for vertical centering */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
 }
 
 .image-wrapper img {
-    width: 100%;
+    max-width: 100%; /* Limit image width to its source width */
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
