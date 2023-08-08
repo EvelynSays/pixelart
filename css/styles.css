@@ -2,6 +2,7 @@
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    font-family: "FFF", sans-serif;
 }
 
 /* Set the overall background color for dark mode */
@@ -56,11 +57,19 @@ nav a:visited {
 }
 
 .image-wrapper {
-    width: calc(33.33% - 20px); /* Adjust width based on the number of images per row */
+    width: 100%; /* Images take full width on smaller screens */
     text-align: center; /* Center images vertically */
     display: flex; /* Enable flexbox layout for vertical centering */
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
+    padding: 10px; /* Add padding around the image */
+    border: 2px solid #334E54; /* Teal border */
+    border-radius: 10px; /* Rounded corners for the border */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper:hover {
+    transform: translateY(-5px); /* Add slight hover effect */
 }
 
 .image-wrapper img {
@@ -73,27 +82,26 @@ nav a:visited {
     transform: rotate(-5deg);
 }
 
-/* Modal styles */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+/* Adjust layout for wider screens */
+@media screen and (min-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .image-wrapper {
+        width: calc(25% - 20px); /* Adjust the percentage based on the desired number of items per row */
+    }
 }
 
-.modal-content {
-    max-width: 80%;
-    max-height: 80%;
+@media screen and (min-width: 1200px) {
+    .image-wrapper {
+        width: calc(20% - 20px); /* Adjust the percentage based on the desired number of items per row */
+    }
 }
 
-.modal-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+@font-face {
+    font-family: "FFF"; /* Font name */
+    src: url("fonts/FFFFORWA.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
