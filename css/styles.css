@@ -13,9 +13,13 @@ h2 {
     color: #B7DC6E;
 }
 
+p {
+    font-size: 6;
+}
+
 /* Set the overall background color for dark mode */
 body {
-    background-color: #1e1e1e; /* Dark Gray */
+    background-color: #005c54; /* Dark Gray */
     color: #fff;
 }
 
@@ -26,6 +30,10 @@ header {
     padding: 1em 0;
 }
 
+footer {
+    font-size: 6;
+    text-align: center;
+}
 
 /* Navigation styles */
 nav ul {
