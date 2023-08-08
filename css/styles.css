@@ -5,6 +5,14 @@ body, h1, h2, p, ul, li {
     font-family: "F16", sans-serif;
 }
 
+h1 {
+    color: #7DBE6E;
+}
+
+h2 {
+    color: #B7DC6E;
+}
+
 /* Set the overall background color for dark mode */
 body {
     background-color: #1e1e1e; /* Dark Gray */
@@ -34,17 +42,13 @@ nav li {
 
 /* Change link color on hover and visited */
 nav a {
-    color: #F0F0F0; /* Slightly Off-White */
+    color: #F9F871; /* Slightly Off-White */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #fff; /* White */
-}
-
-nav a:visited {
-    color: #999; /* Medium Gray */
+    color: #47ffc8; /* White */
 }
 
 /* Image grid styles */
@@ -52,8 +56,9 @@ nav a:visited {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 1px;
     padding: 5px;
+    background-color: #4B9E6B;
     margin: 0 auto; /* Center the entire grid horizontally */
 }
 
@@ -64,8 +69,6 @@ nav a:visited {
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
     padding: 0px; /* Add padding around the image */
-    border-radius: 0px; /* Rounded corners for the border */
-    background-color: #00000011; /* Slightly darker background color */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -90,8 +93,6 @@ nav a:visited {
 .image-wrapper img {
     max-width: 100%; /* Limit image width to its source width */
     height: auto;
-    border: 2px solid #334E54; /* Teal border */
-    border-radius: 10px; /* Rounded corners for the border */
     transition: transform 0.3s ease-in-out;
 }
 
